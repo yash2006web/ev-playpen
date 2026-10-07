@@ -47,7 +47,7 @@ export function stepEngine(s: EngineState, mode: SystemStatus, wantCharge: boole
   } else {
     let target = s.targetSpeed;
     if (wantCharge) target = 0;
-    else if (Math.random() < 0.1) target = CRUISE[Math.floor(Math.random() * CRUISE.length)];
+    else if (Math.random() < 0.1) target = CRUISE[Math.floor(Math.random() * CRUISE.length)] ?? 60;
     n.targetSpeed = target;
     n.speed = clamp(approach(s.speed, target, 0.16) + (target > 0 ? noise(0.8) : 0), 0, 160);
     if (n.speed < 0.6) n.speed = 0;
