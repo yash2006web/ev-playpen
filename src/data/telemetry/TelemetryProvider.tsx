@@ -115,7 +115,7 @@ export function TelemetryProvider({ children }: { children: ReactNode }) {
         push({ kind: "alert", tone: "normal", title: "Condition recovered", detail: "Current returned to normal" });
       }
       const logs = ["Battery telemetry updated", "Motor telemetry updated", "Tyre sensors polled", "Thermal loop nominal"];
-      if (tickRef.current % 2 === 0) push({ kind: "log", tone: "info", title: logs[(tickRef.current / 2) % logs.length] });
+      if (tickRef.current % 2 === 0) push({ kind: "log", tone: "info", title: logs[(tickRef.current / 2) % logs.length] ?? "Telemetry updated" });
     }, TICK_MS);
     return () => window.clearInterval(id);
   }, [push]);
