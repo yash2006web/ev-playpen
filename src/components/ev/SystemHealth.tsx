@@ -1,7 +1,7 @@
 import { Lock, Sparkles, Thermometer, Gauge, Battery } from "lucide-react";
 import { useTelemetry } from "@/data/telemetry/TelemetryProvider";
 import { toneClasses } from "@/data/telemetry/sensors";
-import { AnimatedNumber, Reveal, SectionHeader } from "./primitives";
+import { Reveal, SectionHeader } from "./primitives";
 import { cn } from "@/lib/utils";
 
 function HealthRing({ value, status }: { value: number; status: keyof typeof toneClasses }) {
