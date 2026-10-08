@@ -28,7 +28,7 @@ function HealthRing({ value, status }: { value: number; status: keyof typeof ton
         />
       </svg>
       <div className="absolute inset-0 grid place-items-center text-center">
-        <div>
+        <div className="translate-y-1.5">
           <p className="eyebrow">System health</p>
           <p className={cn("mt-1 font-mono text-sm font-bold tracking-widest", t.text)}>{status}</p>
         </div>
