@@ -102,7 +102,7 @@ export function PerformanceCharts() {
   return (
     <section id="performance" className="mx-auto max-w-[1400px] scroll-mt-20 px-4 py-10 md:px-8">
       <Reveal>
-        <SectionHeader eyebrow="06 · Performance" title="Live performance charts">
+        <SectionHeader eyebrow="05 · Performance" title="Live performance charts">
           <p className="text-sm text-muted-foreground">Last {history.length} samples · tap legend to toggle</p>
         </SectionHeader>
         <div className="grid gap-5 md:grid-cols-2">

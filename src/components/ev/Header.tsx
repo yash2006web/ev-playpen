@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Activity, BatteryCharging, History, LayoutDashboard, Menu, ShieldAlert, X, Zap } from "lucide-react";
+import { Activity, History, LayoutDashboard, Menu, ShieldAlert, X, Zap } from "lucide-react";
 import { useTelemetry } from "@/data/telemetry/TelemetryProvider";
 import { scrollToId } from "./primitives";
 import { cn } from "@/lib/utils";
@@ -8,7 +8,6 @@ const NAV = [
   { id: "dashboard", label: "Dashboard", icon: LayoutDashboard },
   { id: "telemetry", label: "Telemetry", icon: Activity },
   { id: "diagnostics", label: "Diagnostics", icon: ShieldAlert },
-  { id: "charging", label: "Charging", icon: BatteryCharging },
   { id: "history", label: "History", icon: History },
 ];
 

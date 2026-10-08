@@ -80,7 +80,7 @@ export function AlertsTimeline() {
   return (
     <section id="alerts" className="mx-auto max-w-[1400px] scroll-mt-20 px-4 py-10 md:px-8">
       <Reveal>
-        <SectionHeader eyebrow="08 · Events" title="Recent alerts & events" />
+        <SectionHeader eyebrow="07 · Events" title="Recent alerts & events" />
         <div className="card-surface p-6">
           <ol className="relative">
             {alerts.map((e, i) => {

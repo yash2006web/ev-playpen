@@ -24,7 +24,7 @@ export function HistoricalAnalysis() {
   return (
     <section id="history" className="mx-auto max-w-[1400px] scroll-mt-20 px-4 py-10 md:px-8">
       <Reveal>
-        <SectionHeader eyebrow="07 · History" title="Historical analysis">
+        <SectionHeader eyebrow="06 · History" title="Historical analysis">
           <div role="tablist" aria-label="Time range" className="flex rounded-full border border-border bg-card p-1 shadow-[var(--shadow-soft)]">
             {RANGES.map((r) => (
               <button
