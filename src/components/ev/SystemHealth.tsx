@@ -1,7 +1,7 @@
 import { Lock, Sparkles, Thermometer, Gauge, Battery } from "lucide-react";
 import { useTelemetry } from "@/data/telemetry/TelemetryProvider";
 import { toneClasses } from "@/data/telemetry/sensors";
-import { AnimatedNumber, Reveal, SectionHeader } from "./primitives";
+import { Reveal, SectionHeader } from "./primitives";
 import { cn } from "@/lib/utils";
 
 function HealthRing({ value, status }: { value: number; status: keyof typeof toneClasses }) {
@@ -28,12 +28,8 @@ function HealthRing({ value, status }: { value: number; status: keyof typeof ton
         />
       </svg>
       <div className="absolute inset-0 grid place-items-center text-center">
-        <div>
-          <p className="font-display text-5xl font-bold text-foreground">
-            <AnimatedNumber value={value} decimals={0} />
-            <span className="text-2xl text-muted-foreground">%</span>
-          </p>
-          <p className="eyebrow mt-1">System health</p>
+        <div className="translate-y-1.5">
+          <p className="eyebrow">System health</p>
           <p className={cn("mt-1 font-mono text-sm font-bold tracking-widest", t.text)}>{status}</p>
         </div>
       </div>
