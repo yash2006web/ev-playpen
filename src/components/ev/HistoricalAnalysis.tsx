@@ -53,7 +53,9 @@ export function HistoricalAnalysis() {
         </div>
         <div className="mt-5 grid gap-5 lg:grid-cols-12">
           <div className="lg:col-span-7">
-            {data && <ChartCard key={range} title={CHARTS[2].title} series={CHARTS[2].series} data={data.samples} animate />}
+            {data && CHARTS[2] && (
+              <ChartCard key={range} title={CHARTS[2].title} series={CHARTS[2].series} data={data.samples} animate />
+            )}
           </div>
           <div className="card-surface overflow-hidden lg:col-span-5">
             <p className="eyebrow px-5 pt-5">Recent records</p>
