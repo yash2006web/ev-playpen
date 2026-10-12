@@ -1,4 +1,4 @@
-import { AlertTriangle, BatteryCharging, Gauge, Lock, ShieldCheck, Sparkles, Zap } from "lucide-react";
+import { AlertTriangle, BatteryCharging, Gauge, ShieldCheck, Zap } from "lucide-react";
 import { useTelemetry } from "@/data/telemetry/TelemetryProvider";
 import { toneClasses } from "@/data/telemetry/sensors";
 import { AnimatedNumber, StatusPill, scrollToId } from "./primitives";

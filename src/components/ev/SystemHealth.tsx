@@ -50,11 +50,11 @@ export function SystemHealth() {
       <Reveal>
         <SectionHeader eyebrow="01 · Overview" title="System health" />
         <div className="grid gap-5 lg:grid-cols-12">
-          <div className="card-surface p-6 lg:col-span-4">
+          <div className="card-surface p-6 lg:col-span-5">
             <HealthRing value={derived.health} status={live.systemStatus} />
             <p className="mt-4 text-center text-sm text-muted-foreground">{live.primaryDiagnosis}</p>
           </div>
-          <div className="grid gap-3 sm:grid-cols-2 lg:col-span-5">
+          <div className="grid gap-3 sm:grid-cols-2 lg:col-span-7">
             {subs.map((s) => {
               const st = s.ok ? "NORMAL" : live.systemStatus;
               const t = toneClasses[st];
