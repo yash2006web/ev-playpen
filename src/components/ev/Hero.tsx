@@ -41,14 +41,6 @@ export function Hero() {
               <p className="eyebrow">Warnings</p>
               <p className={cn("mt-1 font-display text-3xl font-bold", live.activeWarnings.length ? t.text : "text-foreground")}>{live.activeWarnings.length}</p>
             </button>
-            <button onClick={() => scrollToId("ai")} className="relative overflow-hidden rounded-2xl border border-dashed border-primary/40 bg-primary-soft/60 p-4 text-left">
-              <p className="eyebrow flex items-center gap-1">
-                <Lock className="size-3" /> AI Analysis
-              </p>
-              <p className="mt-2 flex items-center gap-1 font-display text-sm font-semibold text-primary">
-                <Sparkles className="size-3.5" /> Coming soon
-              </p>
-            </button>
           </div>
         </div>
 
