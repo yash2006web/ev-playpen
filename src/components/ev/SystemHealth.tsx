@@ -1,4 +1,4 @@
-import { Lock, Sparkles, Thermometer, Gauge, Battery } from "lucide-react";
+import { Thermometer, Gauge, Battery } from "lucide-react";
 import { useTelemetry } from "@/data/telemetry/TelemetryProvider";
 import { toneClasses } from "@/data/telemetry/sensors";
 import { Reveal, SectionHeader } from "./primitives";
@@ -50,11 +50,11 @@ export function SystemHealth() {
       <Reveal>
         <SectionHeader eyebrow="01 · Overview" title="System health" />
         <div className="grid gap-5 lg:grid-cols-12">
-          <div className="card-surface p-6 lg:col-span-4">
+          <div className="card-surface p-6 lg:col-span-5">
             <HealthRing value={derived.health} status={live.systemStatus} />
             <p className="mt-4 text-center text-sm text-muted-foreground">{live.primaryDiagnosis}</p>
           </div>
-          <div className="grid gap-3 sm:grid-cols-2 lg:col-span-5">
+          <div className="grid gap-3 sm:grid-cols-2 lg:col-span-7">
             {subs.map((s) => {
               const st = s.ok ? "NORMAL" : live.systemStatus;
               const t = toneClasses[st];
@@ -73,21 +73,6 @@ export function SystemHealth() {
                 </div>
               );
             })}
-          </div>
-          <div id="ai" className="relative scroll-mt-24 overflow-hidden rounded-2xl border border-dashed border-primary/40 bg-primary-soft/50 p-6 lg:col-span-3">
-            <div className="pointer-events-none absolute -right-10 -top-10 size-40 rounded-full bg-accent/20 blur-2xl" />
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-card px-2.5 py-1 font-mono text-[10px] font-semibold tracking-widest text-primary">
-              <Lock className="size-3" /> COMING SOON
-            </span>
-            <Sparkles className="mt-6 size-8 text-primary/70" />
-            <h3 className="mt-3 text-lg font-semibold">AI Vehicle Intelligence</h3>
-            <p className="mt-2 text-sm text-muted-foreground">AI anomaly detection will analyze vehicle telemetry patterns.</p>
-            <p className="mt-4 text-xs text-muted-foreground/80">Not active. No analysis is being performed in this prototype.</p>
-            <div className="mt-5 space-y-2 opacity-50" aria-hidden>
-              <div className="h-2 w-4/5 rounded-full bg-primary/15" />
-              <div className="h-2 w-3/5 rounded-full bg-primary/15" />
-              <div className="h-2 w-2/3 rounded-full bg-primary/15" />
-            </div>
           </div>
         </div>
       </Reveal>

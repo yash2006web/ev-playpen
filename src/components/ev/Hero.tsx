@@ -1,4 +1,4 @@
-import { AlertTriangle, BatteryCharging, Gauge, Lock, ShieldCheck, Sparkles, Zap } from "lucide-react";
+import { AlertTriangle, BatteryCharging, Gauge, ShieldCheck, Zap } from "lucide-react";
 import { useTelemetry } from "@/data/telemetry/TelemetryProvider";
 import { toneClasses } from "@/data/telemetry/sensors";
 import { AnimatedNumber, StatusPill, scrollToId } from "./primitives";
@@ -32,7 +32,7 @@ export function Hero() {
           </div>
           <p className="mt-4 max-w-md text-lg text-muted-foreground">{HEADLINE[status]}</p>
 
-          <div className="mt-8 grid grid-cols-3 gap-3">
+          <div className="mt-8 grid grid-cols-2 gap-3">
             <button onClick={() => scrollToId("diagnostics")} className="card-surface card-interactive p-4 text-left">
               <p className="eyebrow">Diagnosis</p>
               <p className={cn("mt-2 font-display text-sm font-semibold", t.text)}>{status === "NORMAL" ? "NORMAL" : live.primaryDiagnosis}</p>
@@ -40,14 +40,6 @@ export function Hero() {
             <button onClick={() => scrollToId("diagnostics")} className="card-surface card-interactive p-4 text-left" aria-label="Active warnings — view diagnostics">
               <p className="eyebrow">Warnings</p>
               <p className={cn("mt-1 font-display text-3xl font-bold", live.activeWarnings.length ? t.text : "text-foreground")}>{live.activeWarnings.length}</p>
-            </button>
-            <button onClick={() => scrollToId("ai")} className="relative overflow-hidden rounded-2xl border border-dashed border-primary/40 bg-primary-soft/60 p-4 text-left">
-              <p className="eyebrow flex items-center gap-1">
-                <Lock className="size-3" /> AI Analysis
-              </p>
-              <p className="mt-2 flex items-center gap-1 font-display text-sm font-semibold text-primary">
-                <Sparkles className="size-3.5" /> Coming soon
-              </p>
             </button>
           </div>
         </div>
