@@ -32,7 +32,7 @@ export function Hero() {
           </div>
           <p className="mt-4 max-w-md text-lg text-muted-foreground">{HEADLINE[status]}</p>
 
-          <div className="mt-8 grid grid-cols-3 gap-3">
+          <div className="mt-8 grid grid-cols-2 gap-3">
             <button onClick={() => scrollToId("diagnostics")} className="card-surface card-interactive p-4 text-left">
               <p className="eyebrow">Diagnosis</p>
               <p className={cn("mt-2 font-display text-sm font-semibold", t.text)}>{status === "NORMAL" ? "NORMAL" : live.primaryDiagnosis}</p>
